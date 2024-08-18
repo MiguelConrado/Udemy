@@ -3,7 +3,14 @@ function mostrarHora(){
     return data.toLocaleTimeString('pt-BR',{hour12:false})
 }
 
-function funcaoDoInteval(){
+const timer =  setInterval(function (){
     console.log(mostrarHora())
-}
-setInterval(funcaoDoInteval, 1000)
+}, 1000);
+
+setTimeout(function(){
+    clearInterval(timer);
+},4000)
+
+setTimeout(function(){
+    console.log('dsaikdlasd')
+}, 5000)
